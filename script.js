@@ -133,6 +133,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // Mouse Parallax for Background Blobs
+    const blobs = document.querySelectorAll('.blob');
+    document.addEventListener('mousemove', (e) => {
+        const x = (e.clientX / window.innerWidth - 0.5) * 60;
+        const y = (e.clientY / window.innerHeight - 0.5) * 60;
+        
+        blobs.forEach((blob, index) => {
+            const factor = index === 0 ? 1 : -1;
+            blob.style.setProperty('--mouse-x', `${x * factor}px`);
+            blob.style.setProperty('--mouse-y', `${y * factor}px`);
+        });
+    });
+
     let currentLang = localStorage.getItem('portfolioLang') || 'en';
     
     // Apply initial language state
