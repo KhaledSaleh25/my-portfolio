@@ -485,7 +485,8 @@ html[dir="rtl"] .nav-links a::after {
 .volunteer-gallery img {
     flex: 0 0 320px;
     height: 250px;
-    object-fit: cover;
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.2);
     border-radius: 16px;
     border: 2px solid var(--glass-border);
     scroll-snap-align: start;
