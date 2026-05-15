@@ -148,6 +148,36 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // Lightbox Logic for Image Galleries
+    const galleryImages = document.querySelectorAll('.volunteer-gallery img');
+    if (galleryImages.length > 0) {
+        // Create lightbox HTML dynamically
+        const lightbox = document.createElement('div');
+        lightbox.className = 'lightbox';
+        lightbox.innerHTML = `
+            <span class="lightbox-close">&times;</span>
+            <img src="" alt="Lightbox Image">
+        `;
+        document.body.appendChild(lightbox);
+
+        const lightboxImg = lightbox.querySelector('img');
+        const closeBtn = lightbox.querySelector('.lightbox-close');
+
+        galleryImages.forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+            });
+        });
+
+        // Close on background click
+        lightbox.addEventListener('click', (e) => {
+            if (e.target !== lightboxImg) {
+                lightbox.classList.remove('active');
+            }
+        });
+    }
+
     let currentLang = localStorage.getItem('portfolioLang') || 'en';
     
     // Apply initial language state
