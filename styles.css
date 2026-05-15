@@ -483,11 +483,12 @@ html[dir="rtl"] .nav-links a::after {
 }
 
 .volunteer-gallery img {
-    flex: 0 0 320px;
-    height: 250px;
+    flex: 0 0 auto;
+    height: 300px;
+    width: auto;
+    max-width: 90vw; /* Prevent it from overflowing the screen on mobile */
     object-fit: contain;
-    background: rgba(0, 0, 0, 0.2);
-    border-radius: 16px;
+    border-radius: 12px;
     border: 2px solid var(--glass-border);
     scroll-snap-align: start;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease;
