@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaled Mohamed Saleh - Portfolio</title>
+    <meta name="description" content="Khaled Mohamed Saleh - Software Engineer and BI Developer Portfolio">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+
+    <nav class="glass-nav">
+        <div class="nav-container">
+            <a href="index.html" class="logo">Khaled.</a>
+            <div class="nav-links">
+                <a href="index.html" class="active" data-i18n="navHome">Home</a>
+                <a href="about.html" data-i18n="navAbout">About</a>
+                <a href="projects.html" data-i18n="navProjects">Projects</a>
+                <a href="activities.html" data-i18n="navActivities">Activities</a>
+                <a href="volunteering.html" data-i18n="navVolunteering">Volunteering</a>
+                <a href="contact.html" data-i18n="navContact">Contact</a>
+                <button id="lang-toggle" class="lang-btn" data-i18n="changeLang">عربي</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section id="home" class="hero fade-in">
+            <div class="hero-content">
+                <h2 class="subtitle" data-i18n="heroSubtitle">Hello, I'm</h2>
+                <h1 class="title"><span data-i18n="heroTitle">Khaled </span><span class="gradient-text" data-i18n="heroTitleSpan">Saleh</span></h1>
+                <p class="description" data-i18n="heroDescription">Software Engineer & BI Developer. I specialize in Data Analysis, PowerBI, and building modern software systems using Java, Python, and Web Technologies.</p>
+                <div class="cta-buttons">
+                    <a href="projects.html" class="btn btn-primary" data-i18n="btnViewWork">View My Work</a>
+                    <a href="contact.html" class="btn btn-secondary" data-i18n="btnContactMe">Contact Me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p data-i18n="footer">© 2026 Crafted with ❤️. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
